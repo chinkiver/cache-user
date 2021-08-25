@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function (){
+    ray('My first ray call');
     return view('welcome');
 });
+
+Route::resource('users', \App\Http\Controllers\UserController::class);
